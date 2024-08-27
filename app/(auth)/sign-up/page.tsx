@@ -1,0 +1,43 @@
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Github } from "lucide-react";
+import Google from "../../../public/google.png"
+import Link from "next/link";
+import Image from "next/image";
+
+export default function SignUp() {
+    return (
+        <div className="mt-20 rounded py-10 px-6 md:mt-0 md:max-w-sm md:px-14 ">
+            <form>
+               <h1 className="text-3xl text-center font-lora">Sign Up</h1>
+               <div className="space-y-4 mt-5">
+                   <Input
+                      type="email"
+                      name="email"
+                      placeholder="Email"
+                      className=" placeholder:text-xs placeholder:text-grey-400 w-full inline-block"                   
+                   />
+                     <Input
+                      type="password"
+                      name="password"
+                      placeholder="Password"
+                      className=" placeholder:text-xs placeholder:text-grey-400 w-full inline-block"                   
+                   />
+                   <Button type="submit" className="w-full bg-indigo-400 hover:bg-indigo-700">Sign Up</Button>
+               </div>
+            </form>
+            <div className="mt-1">
+                <p className="text-xs text-center">Already have an account? <Link href="/login" className="text-indigo-400 hover:text-indigo-700">Log In</Link></p>
+            </div>
+
+            <div className="flex w-full justify-center items-center gap-x-3 mt-6 ">
+                <Button variant="outline" size="icon">
+                    <Github className="w-4 h-4" />
+                </Button>
+                <Button variant="outline" size="icon">
+                    <Image src={Google} alt="google" className="w-4 h-4"/>
+                </Button>
+            </div>
+        </div>
+    )
+}
