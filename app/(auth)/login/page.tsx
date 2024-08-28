@@ -2,8 +2,16 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import GithubSignIn from "@/app/components/GithubSigninButton";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/utils/auth";
+import { redirect } from "next/navigation";
 
-export default function Login() {
+export default async function Login() {
+    const session = await getServerSession(authOptions)
+
+    if(session) {
+        return redirect('/home')
+    }
     return (
         <div className="mt-20 rounded py-10 px-6 md:mt-0 md:max-w-sm md:px-14 ">
         <form>
