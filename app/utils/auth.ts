@@ -1,13 +1,15 @@
-import  NextAuth  from "next-auth";
+import   { NextAuthOptions }  from "next-auth";
 import {PrismaAdapter}  from "@auth/prisma-adapter";
-import Prisma from './db'
+import prisma from './db'
 import Github from "next-auth/providers/github";
 import Nodemailer from "next-auth/providers/email"
 import Google from "next-auth/providers/google";
+import { Adapter } from "next-auth/adapters";
 
 
-export const { handlers, auth, signIn, signOut } = NextAuth({
-        adapter: PrismaAdapter(Prisma),
+
+export const authOptions = {
+        adapter: PrismaAdapter(prisma) as Adapter ,
         providers: [
     Github ({
        clientId: process.env.GITHUB_ID as string,
@@ -31,7 +33,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
      }),
     ]
 
-})
+} satisfies NextAuthOptions
 
 
 

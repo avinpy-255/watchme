@@ -1,11 +1,19 @@
+import { getServerSession } from "next-auth";
 import Image from "next/image";
+import { authOptions } from "./utils/auth";
+import { redirect } from "next/navigation";
+import { Button } from "@/components/ui/button";
 
-export default function Home() {
-  return (
-    <>
-      <div className="h-screen w-screen bg-gradient-to-l from-gray-200 via-fuchsia-200 to-stone-100 ">
-        <h1 className="py-4 px-4 text-3xl font-PlayfairDisplay">Watch ME!</h1>
-      </div>
-    </>
-  );
+export default async function Home() {
+  const session = await getServerSession(authOptions)
+  
+
+  if(!session) {
+    return redirect("/login")
+  }else{
+    return redirect('/home')
+  }
+   
+  
+  
 }
