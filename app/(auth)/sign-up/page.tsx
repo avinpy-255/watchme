@@ -39,7 +39,7 @@ export default async function SignUp() {
 
             <div className="flex w-full justify-center items-center gap-x-3 mt-6 ">
                <GithubSignIn/>
-        
+               <GoogleSignInButton/>
             </div>
         </div>
     )
