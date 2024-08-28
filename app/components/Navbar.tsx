@@ -27,7 +27,7 @@ export default function Navbar() {
       <div className="w-full max-w-7xl mx-auto items-center justify-between px-5 sm:px-6 py-5 lg:px-8 flex" >
           <div  className="flex items-center">
           <Link href="/home" className="flex ">
-            <h1 className="text-4xl  text-gray-800 w-full">Watch Me!</h1>
+            <h1 className="text-4xl  text-gray-300 w-full">Watch Me!</h1>
           </Link>
      
         <ul className="lg:flex gap-x-4 ml-14 hidden">
@@ -35,7 +35,7 @@ export default function Navbar() {
                  <div key={idx}>
                      {pathName === link.href ? (
 <li>
-    <Link href={link.href} className="text-gray-800 font-semibold border border-rose-600 rounded-lg hover:text-gray-900">
+    <Link href={link.href} className="text-gray-300 font-semibold border border-rose-600 rounded-lg hover:text-gray-100">
       {link.name}
     </Link>
   
@@ -43,7 +43,7 @@ export default function Navbar() {
                      ): (
 
                         <li>
-                            <Link href={link.href} className="text-gray-500 hover:text-gray-700">
+                            <Link href={link.href} className="text-gray-300 hover:text-gray-100">
                               {link.name}
                             </Link>
                         </li>
