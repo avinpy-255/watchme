@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Heart, PlayCircle } from "lucide-react";
 
 import { useState } from "react";
@@ -35,7 +35,7 @@ export function MovieCard({
   const pathName = usePathname();
   return (
     <>
-      <button onClick={() => setOpen(true)} className="-mt-14">
+      <button onClick={() => setOpen(true)} className="-mt-14 ">
         <PlayCircle className="h-20 w-20  " />
       </button>
 
