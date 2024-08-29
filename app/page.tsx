@@ -9,7 +9,7 @@ export default async function Home() {
   
 
   if(!session) {
-    return redirect("/login")
+    return redirect("/sign-up")
   }else{
     return redirect('/home')
   }
