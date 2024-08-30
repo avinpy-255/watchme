@@ -36,7 +36,7 @@ export function MovieCard({
   return (
     <>
       <button onClick={() => setOpen(true)} className="-mt-14 ">
-        <PlayCircle className="h-20 w-20  " />
+        <PlayCircle className="h-20 w-20 color-white " color="#fff"/>
       </button>
 
       <div className="right-5 top-5 absolute z-10">

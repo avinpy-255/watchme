@@ -63,12 +63,12 @@
 
 @layer base {
   h1{
-    @apply font-lora
+    @apply font-lora 
   }
   * {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-gradient-to-l from-slate-500 to-slate-800
   }
 }
