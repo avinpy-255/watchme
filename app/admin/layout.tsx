@@ -3,6 +3,8 @@ import { ReactNode } from "react";
 import { authOptions } from "../utils/auth";
 import { redirect } from "next/navigation";
 
+import AdminNav from "../components/AdminNav";
+
 export default async function AdminPage({ children }: { children: ReactNode }) {
   const session = await getServerSession(authOptions);
 
@@ -15,7 +17,7 @@ export default async function AdminPage({ children }: { children: ReactNode }) {
   return (
     <>
       <main className="w-full max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <h1>Hi, Admin</h1>
+        <AdminNav/>
         {children}
       </main>
     </>
