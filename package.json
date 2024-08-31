@@ -25,6 +25,7 @@
     "next-video": "^1.1.4",
     "react": "^18",
     "react-dom": "^18",
+    "react-player": "^2.16.0",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7"
   },

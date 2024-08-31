@@ -5,8 +5,10 @@ import { Heart, PlayCircle } from "lucide-react";
 
 import { useState } from "react";
 import { addTowatchlist, deleteFromWatchlist } from "../utils/action";
-import { usePathname } from "next/navigation";
+import {  useRouter,  usePathname } from "next/navigation";
 import PlayVideoModal from "./PlayVideoModal";
+
+import { redirect } from "next/navigation";
 
 interface iAppProps {
   title: string;
@@ -33,10 +35,15 @@ export function MovieCard({
 }: iAppProps) {
   const [open, setOpen] = useState(false);
   const pathName = usePathname();
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push('/home/playvideo');
+  };
   return (
     <>
-      <button onClick={() => setOpen(true)} className="-mt-14 ">
-        <PlayCircle className="h-20 w-20 color-white " color="#fff"/>
+   <button onClick={handleClick} className="-mt-14 focus:outline-none">
+        <PlayCircle className="h-20 w-20 text-white" />
       </button>
 
       <div className="right-5 top-5 absolute z-10">
