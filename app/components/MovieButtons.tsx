@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { InfoIcon, PlayCircle } from "lucide-react";
 import { useState } from "react";
 import PlayVideoModal from "./PlayVideoModal";
+import {  useRouter } from "next/navigation";
 
 interface iAppProps {
   overview: string;
@@ -25,9 +26,14 @@ export default function MovieButtons({
   youtubeUrl,
 }: iAppProps) {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push('/home/playvideo');
+  };
   return (
     <>
-      <Button onClick={() => setOpen(true)} className="text-lg font-medium">
+      <Button onClick={handleClick}  className="text-lg font-medium">
         <PlayCircle className="mr-2 h-6 w-6" /> Play
       </Button>
       <Button

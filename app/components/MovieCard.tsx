@@ -8,7 +8,7 @@ import { addTowatchlist, deleteFromWatchlist } from "../utils/action";
 import {  useRouter,  usePathname } from "next/navigation";
 import PlayVideoModal from "./PlayVideoModal";
 
-import { redirect } from "next/navigation";
+
 
 interface iAppProps {
   title: string;

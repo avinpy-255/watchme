@@ -38,6 +38,9 @@ export default function PlayVideoPage() {
             width="100%"
             height="100%"
             controls={true}
+            config={{ file: { attributes: { controlsList: 'nodownload',
+        } } }}
+            
           />
         </div>
         <div className="mt-4">
