@@ -4,6 +4,10 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
 
+
+
+
+
 export default function PlayVideoPage() {
   const videoDetails = {
     title: "Big Buck Bunny",
