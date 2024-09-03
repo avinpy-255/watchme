@@ -44,9 +44,9 @@ export function MovieCard({
   };
   return (
     <>
-   <button onClick={handleClick} className="-mt-14 focus:outline-none">
-        <PlayCircle className="h-20 w-20 text-white" />
-      </button>
+   <Button onClick={handleClick} className="text-lg font-medium bg-transparent rounded-3xl">
+        <PlayCircle />
+      </Button>
 
       <div className="right-5 top-5 absolute z-10">
         {watchList ? (

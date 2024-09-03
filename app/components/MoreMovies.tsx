@@ -70,6 +70,7 @@ export default async function RecentlyAdded() {
                 year={movie.release}
                 videoSource={movie.videoSource}
               />
+              
             </div>
           </div>
         </div>

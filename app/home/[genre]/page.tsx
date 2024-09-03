@@ -91,6 +91,7 @@ export default async function CategoryPage({
 }: {
   params: { genre: string };
 }) {
+  console.log(params.genre);
   const session = await getServerSession(authOptions);
   const data = await getData(params.genre, session?.user?.email as string);
 
