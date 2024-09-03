@@ -17,6 +17,7 @@ async function getData(userId: string) {
       },
       imageString: true,
       youtubeString: true,
+      videoSource: true,
       age: true,
       release: true,
       duration: true,
@@ -67,6 +68,7 @@ export default async function RecentlyAdded() {
                 age={movie.age}
                 time={movie.duration}
                 year={movie.release}
+                videoSource={movie.videoSource}
               />
             </div>
           </div>
