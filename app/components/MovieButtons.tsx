@@ -14,6 +14,7 @@ interface iAppProps {
   title: string;
   releaseDate: number;
   duration: number;
+  videoSource: string
 }
 
 export default function MovieButtons({
@@ -23,6 +24,7 @@ export default function MovieButtons({
   overview,
   releaseDate,
   title,
+  videoSource,
   youtubeUrl,
 }: iAppProps) {
   const [open, setOpen] = useState(false);
@@ -53,6 +55,7 @@ export default function MovieButtons({
         release={releaseDate}
         title={title}
         youtubeUrl={youtubeUrl}
+        videoSource={videoSource}
       />
     </>
   );

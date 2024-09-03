@@ -20,6 +20,7 @@ interface iAppProps {
   year: number;
   age: number;
   time: number;
+  videoSource: string
 }
 
 export function MovieCard({
@@ -32,6 +33,7 @@ export function MovieCard({
   age,
   time,
   year,
+  videoSource
 }: iAppProps) {
   const [open, setOpen] = useState(false);
   const pathName = usePathname();
@@ -90,6 +92,7 @@ export function MovieCard({
         age={age}
         duration={time}
         release={year}
+        videoSource={videoSource}
       />
     </>
   );

@@ -5,6 +5,9 @@ import MovieButtons from "./MovieButtons"
 
 async function  getData() {
     const data = await prisma.movie.findFirst({
+        where: {
+            category: "spiderman",
+          },
          select: {
             title: true,
             overview: true,
@@ -30,7 +33,7 @@ export default async function MovieVideo() {
              autoPlay
              muted
              loop
-             src={data?.videoSource}
+             src={data?.youtubeString}
              className="w-full absolute top-0 left-0 h-[60vh] object-cover -z-10 brightness-[70%] rounded-2xl shadow-xl"
             ></video>
 
@@ -47,6 +50,7 @@ export default async function MovieVideo() {
                     title={data?.title as string}
                     youtubeUrl={data?.youtubeString as string}
                     key={data?.id}
+                    videoSource={data?.videoSource as string}
                    />
                 </div>
             </div>

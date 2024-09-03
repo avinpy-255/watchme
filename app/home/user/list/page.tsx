@@ -21,6 +21,7 @@ async function getData(userId: string) {
           id: true,
           WatchLists: true,
           youtubeString: true,
+          videoSource: true
         },
       },
     },
@@ -72,6 +73,7 @@ export default async function Watchlist() {
                   }
                   year={movie.Movie?.release as number}
                   youtubeUrl={movie.Movie?.youtubeString as string}
+                  videoSource={movie.Movie?.videoSource as string}
                 />
               </div>
             </div>
