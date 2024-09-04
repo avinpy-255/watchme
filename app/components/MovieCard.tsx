@@ -40,7 +40,7 @@ export function MovieCard({
   const router = useRouter();
 
   const handleClick = () => {
-    router.push('/home/playvideo');
+    router.push(`/movies/${movieId}`);
   };
   return (
     <>

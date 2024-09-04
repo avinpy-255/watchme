@@ -12,7 +12,7 @@ const ClientPlayer: React.FC<ClientPlayerProps> = ({ url }) => {
     <div className="player-wrapper">
       <ReactPlayer
         url={url}
-        className="react-player"
+        className="rounded-lg"
         controls={true}
         width="100%"
         height="100%"

@@ -15,7 +15,7 @@ interface linkProps {
 
 const links: linkProps[] = [
     { name: "Home", href: "/home" },
-    { name: "Tv Shows", href: "/home/shows" },
+
     { name: "Movies", href: "/home/movies" },
     {name: "Recently Added", href: "/home/recently" },
 {name: "My List", href: "/home/user/list" }
@@ -55,8 +55,7 @@ export default function Navbar() {
         </ul>
       </div>
       <div className="flex items-center gap-x-8">
-         <Search className="w-5 h-5 text-gray-800 cursor-pointer"/>
-         <Bell className="h-5 w-5 text-gray-800 cursor-pointer"/>
+         
          <UserNav/>
       </div>
       </div>

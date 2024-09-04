@@ -43,21 +43,21 @@ export function TestCard({
   return (
     <>
        <div className="relative bg-gray-900 rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
-      {/* Play Button Overlay */}
+ 
       <div className="absolute inset-0 z-10 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity">
         <Button onClick={handleClick} className="text-lg font-medium bg-transparent rounded-full p-3">
           <PlayCircle className="w-10 h-10 text-white" />
         </Button>
       </div>
 
-      {/* Movie Poster */}
+
       <img
-        src={imageString} // Replace with actual image path
+        src={imageString} 
         alt={title}
         className="w-full h-64 object-cover"
       />
 
-      {/* Watchlist Button */}
+   
       <div className="absolute top-4 right-4 z-10">
         {watchList ? (
           <form action={deleteFromWatchlist}>
@@ -92,6 +92,9 @@ export function TestCard({
           {overview}
         </p>
       </div>
+    </div>
+    <div>
+        
     </div>
     </>
   );
