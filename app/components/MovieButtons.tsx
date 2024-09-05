@@ -28,10 +28,15 @@ export default function MovieButtons({
   youtubeUrl,
 }: iAppProps) {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push(`/movies/${id}`);
+  };
   
   return (
     <>
-      <Button onClick={() => setOpen(true)} className="text-lg font-medium">
+      <Button onClick={handleClick} className="text-lg font-medium">
         <PlayCircle className="mr-2 h-6 w-6" /> Play
       </Button>
       <Button

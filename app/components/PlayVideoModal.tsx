@@ -1,6 +1,10 @@
-'use client'
-import React from 'react';
-import ReactPlayer from 'react-player';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 interface iAppProps {
   title: string;
@@ -11,41 +15,37 @@ interface iAppProps {
   release: number;
   age: number;
   duration: number;
-  videoSource: string;
+  videoSource: string
 }
 
 export default function PlayVideoModal({
   changeState,
+  overview,
   state,
+  title,
+  youtubeUrl,
+  age,
+  duration,
   release,
-  videoSource,
+  videoSource
 }: iAppProps) {
-  if (!state) return null; // If the modal state is false, return null to hide it
-
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="relative bg-slate-800/30 p-0 m-0 h-100 w-100">
-        <button
-          className="absolute top-2 right-2 text-white  rounded-full p-2"
-          onClick={() => changeState(!state)}
-        >
-          X
-        </button>
-        <div className="px-1 py-1 h-full flex justify-center items-center">
-          <div className="w-full h-full">
-            <ReactPlayer
-              className="react-player"
-              url={videoSource}
-              width="100%"
-              height="100%"
-              controls={true}
-              config={{
-                file: { attributes: { controlsList: 'nodownload' } },
-              }}
-            />
+    <Dialog open={state} onOpenChange={() => changeState(!state)}>
+      <DialogContent className="sm:max-w-[425px]">
+    
+        <DialogHeader>
+          <DialogTitle>{title}</DialogTitle>
+          <DialogDescription className="line-clamp-3">
+            {overview}
+          </DialogDescription>
+          <div className="flex gap-x-2 items-center">
+            <p>{release}</p>
+            <p className="border py-o.5 px-1 border-gray-200 rounded">{age}+</p>
+            <p>{duration}h</p>
           </div>
-        </div>
-      </div>
-    </div>
+        </DialogHeader>
+        
+      </DialogContent>
+    </Dialog>
   );
 }
