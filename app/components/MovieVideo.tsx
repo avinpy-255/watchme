@@ -34,7 +34,7 @@ export default async function MovieVideo() {
              muted
              loop
              src={data?.youtubeString}
-             className="w-full absolute top-0 left-0 h-[60vh] object-cover -z-10 brightness-[70%] rounded-2xl shadow-xl"
+             className="w-full absolute top-0 left-0 h-[60vh] object-cover -z-10 brightness-[70%] rounded-b-2xl shadow-xl"
             ></video>
 
             <div className="absolute w-[90%] lg:w-[40%] mx-auto">
