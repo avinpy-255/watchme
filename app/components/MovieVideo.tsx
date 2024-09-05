@@ -40,7 +40,7 @@ export default async function MovieVideo() {
             <div className="absolute w-[90%] lg:w-[40%] mx-auto">
                 <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold">{data?.title}</h1>
                 
-                <div className="flex gap-x-3 mt-4">
+                <div className="flex gap-x-3 mt-10">
                    <MovieButtons
                     age={data?.age as number}
                     duration={data?.duration as number}
