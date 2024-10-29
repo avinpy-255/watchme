@@ -1,5 +1,4 @@
 import MovieVideo from "../components/MovieVideo"
-import RecentlyAdded from "../components/RecentlyAdded"
 import TestCardAccsses from "../components/TestCardAccsses"
 
 
